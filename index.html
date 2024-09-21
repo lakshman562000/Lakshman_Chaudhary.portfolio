@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lakshman Chaudhary Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css"> 
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Lakshman Chaudhary</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello and Welcome! </span>
+			            <h1 class="mb-4 mt-3">I'm <span>Lakshman Chaudhary</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Scientist  ',
+						'Data Analyst  ',
+						'ML/AI Engineer',
+						'Business Analyst',
+						'Full Stack Web Developer',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A Senior Data Analyst</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://github.com/lakshman562000" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Lakshman Chaudhary</span></p>
+										<!-- <p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p> -->
+										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<p><span class="title-s">Address: </span> <span>Darbhanga, Bihar, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a multifaceted professional with a strong foundation in Mechanical Engineering and a minor in Computer Science, graduating from PES University in 2024.
+									With expertise in data science, machine learning, and business analysis.
+									Skilled in programming languages like Python, R, SQL, and Java.
+									Experienced in data wrangling, data visualization, and data mining.
+									Proficient in machine learning frameworks like TensorFlow, PyTorch, and Scikit-learn.
+									Strong understanding of statistical modeling and data mining techniques.
+									Proficient in cloud computing platforms like AWS, Azure, and Google Cloud.
+									Excellent problem-solving skills, analytical thinking, and communication abilities.
+									Dedicated to driving business outcomes and making a positive impact in the industry.
+									With a strong passion for continuous learning and professional growth.
+									
+									</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Scientist, Data Analyst, ML/AI Engineer, Business Analyst &amp; Full Stack Web Developer</span></li>
+									<!-- <li class="d-flex"><span>Domain:</span> <span>Data Scientist, Data Analyst, ML/AI Engineer, Full Stac Web Developer;</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>B.Tech in ME-(Minor in CSE)</span></li>
+									<li class="d-flex"><span>Programming Languages:</span> <span>Python, R, SQL </span></li>
+									<li class="d-flex"><span>Statistics and Analytics:</span> <span> Data Analytics, Exploratory Data Analysis,Statistical Analysis, MS PowerPoint</span></li>
+									<li class="d-flex"><span>Data Visualization Tools:</span> <span>Tableau, Power BI (DAX, Dashboards, Reports), Excel (Pivot Tables)</span></li>
+									<li class="d-flex"><span>Data analysis and Machine Learning Libraries:</span> <span>Pandas, NumPy, Matplotlib, SciPy, Scikit-learn, TensorFlow and PyTorch</span></li>
+									<li class="d-flex"><span>Deep learning:</span> <span>Neural networks, Convolutional networks</span></li>
+									<li class="d-flex"><span>Natural Language Processing (NLP):</span> <span>Text analysis, sentiment analysis</span></li>
+									<li class="d-flex"><span>Database management:</span> <span>Relational database (MySQL) and NoSQL database (MongoDB)</span></li>
+									<li class="d-flex"><span>Microsoft Office:</span> <span>Excel (primary tools for Data Analysis), Word, PowerPoint (For reporting and presentation)</span></li>
+									<li class="d-flex"><span>Operating Systems:</span> <span>Windows, Linux</span></li>
+									<li class="d-flex"><span>Cloud platforms:</span> <span>AWS, Azure, Google Cloud</span></li>
+									<li class="d-flex"><span>Version control:</span> <span>Git, GitHub</span></li>
+									<li class="d-flex"><span>Business acumen:</span> <span>Domain knowledge, business operations, Understand industry challenges and market trends</span></li>
+									<li class="d-flex"><span>Problem Solving:</span> <span>Critical thinking, analytical skills, Learn to approach complex problems with a structured methodology</span></li>
+									<li class="d-flex"><span>Communication:</span> <span>Storytelling, Reporting, Presentation, Stakeholder management, Develop presentation and storytelling</span></li>
+									<li class="d-flex"><span>Collaboration:</span> <span>Teamwork, Stakeholder management, Practice working with cross-functional teams</span></li>
+									<li class="d-flex"><span>Mathematics and Statistics:</span> <span>Linear algebra, Calculus, Probability and statistics, Optimization techniques, Signal processing</span></li>
+									<li class="d-flex"><span>Data Science Tools:</span> <span>Jupyter Notebook, Google Colab, Pycharm, Visual Studio code(VS Code), Apache Spark, Hadoop, NoSQL databases(MongoDB), Data warehousing(Amazon Redshift)</span></li>
+									<li class="d-flex"><span>Business Skills:</span> <span>Business acumen and domain knowledge, Communication and storytelling, Project management and prioritization, Collaboration and stakeholders</span></li>
+									<li class="d-flex"><span>Soft Skills:</span> <span>Time Management, Adaptability, Continuous learning, Leadership, Teamwork, Critical thinking and problem-solving, Curiosity and continuous learning, Time management and organization, effective communication and presentation, Teamwork and adaptability</span></li>
+									<li class="d-flex"><span>Data preprocessing:</span> <span>Data cleaning, Data wrangling, Data normalization, feature engineering</span></li>
+									<li class="d-flex"><span>Data collection:</span> <span>Primary, Secondary data collection</span></li>
+									<li class="d-flex"><span>Model evaluation:</span> <span>Metrics, Cross-validation</span></li>
+									<li class="d-flex"><span>Deployment:</span> <span>Cloud, on-premise deployment</span></li>
+									<li class="d-flex"><span>Computer vision:</span> <span>Image processing, object detection</span></li>
+									<li class="d-flex"><span>Project management:</span> <span>Agile, waterfall methodologies</span></li>
+									<li class="d-flex"><span>Strategic thinking:</span> <span>Business strategy, market analysis</span></li>
+									<li class="d-flex"><span>Full Stack Web Development Skills:</span> <span>PHP, HTML, CSS, MySQL, MySQLi, JavaScript, jQuery, Bootstrap, Wordpress, Git and  GitHub</span></li>
+									<li class="d-flex"><span>Mechanical Engineering Skills:</span> <span>Mathematical modeling and simulation, CAD Software-SolidWorks, FEA Software-ANSYS, Statistical analysis and data interpretation, Problem-solving and analytical thinking, Programming skills(e.g., MATLAB, Python), Familiarity with sensors and data acquisition systems, Ability to learn new tools and technologies, Understanding of physical principles and real-worl applications, Strong analytical skills</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Listening Music, Cycling</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/lakshman-chaudhary-4532061ba/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">August,2024-September,2024</span>
+						<h2>Data Science Intern</h2>
+						<span class="position">Unified Mentor Pvt. Ltd.</span>
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+							<ul>
+								<li>Gained hands-on experience in data analysis, machine learning, and visualization
+									Worked on real-world projects, applying data wrangling, modeling, and interpretation techniques
+									</li>
+								<li>Developed predictive models using Python, R, and machine learning frameworks
+									Improved business efficiency through data-driven insights
+									Enhanced skills in problem-solving, analytical thinking, and communication
+									Acquired valuable industry experience in the data science domain.</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May,2023-July,2023</span>
+						<h2>Machine Learning Intern</h2>
+						<span class="position">Intrainz Innovation Private Ltd</span>
+						<!-- <p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.  -->
+							<ul>
+								<li>Explored machine learning concepts and applied them to real-world problems
+									Built and deployed predictive models using Python, TensorFlow, and Scikit-learn
+									Enhanced data analysis skills through data preprocessing, feature engineering, and visualization
+									</li>
+								<li>Optimized model performance through hyperparameter tuning and cross-validation
+									Developed strong problem-solving skills and effective communication techniques
+									Gained practical experience in the machine learning domain and expanded industry knowledge.</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2024</span>
+    					<h2>Bachelor of Technology</h2>
+    					<span class="position">PES University, Bengaluru, India</span>
+    					<p class="mt-4">CGPA: 6.6/10 </p>
+						<p class="mt-4">Mechanical Engineering - Minor in CSE, Specialization in Aerospace Engineering</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2018</span>
+    					<h2>Higher Secondary Certificate (HSC), Intermediate, or Senior Secondary</h2>
+    					<span class="position">MK College, LaheriaSarai, Darbhanga, Bihar</span>
+    					<p class="mt-4">Percentage: 61% </p>
+    				</div>
+				</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2015-2016</span>
+						<h2>Secondary School Certificate (SSC)</h2>
+						<span class="position">Sati High School Parari,Darbhanga, Bihar</span>
+						<p class="mt-4">Percentage: 70% </p>
+					</div>
+				</div>
+			</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+<p><a href="https://drive.google.com/file/d/1v74KGVs5nPizcNoVoMM1aae2TsDDAyOg/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a></p>
+
+
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are a few of my Data Science and Analytics projects.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/lakshman562000/CHATBOT" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/lakshman562000/CHATBOT">CHATBOT</a></h3>
+                <p>Designed and developed intelligent AI-powered chatbot for automated customer support, personalized user engagement, and efficient information retrieval utilizing natural language processing and machine learning capabilities.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/lakshman562000/Personalized-Healthcare-Recommendations" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/lakshman562000/Personalized-Healthcare-Recommendations">Personalized Healthcare Recommendations</a></h3>
+                <p>Personalized Healthcare Companion: AI-driven platform providing tailored recommendations for patients and professionals, simplifying medical decision-making and improving outcomes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/lakshman562000/Climate-Change-Modeling" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/lakshman562000/Climate-Change-Modeling">Climate-Change-Modeling</a></h3>
+                <p>Climate Change Modeling: Analyzing NASA's comprehensive climate dataset to predict environmental changes and inform sustainability initiatives. Leveraging machine learning and statistical techniques to uncover insights and forecast future climate trends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpeg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> Diving deep into the realms of data science, data analytics, machine learning/AI, business analytics and full-stack web development, I thrive on unraveling hidden data stories. Explore my GitHub profile for more insights! </h4>
+						<br>
+						<p><a href="https://github.com/lakshman562000" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+		<div class="row d-flex contact-info mb-5">
+			<div class="col-md-4 d-flex ftco-animate justify-content-center">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-map-signs"></span>
+					</div>
+					<h3 class="mb-4">Address</h3>
+					<p>Darbhanga, Bihar, India</p>
+				</div>
+			</div>
+		
+			<div class="col-md-4 d-flex ftco-animate justify-content-center">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-paper-plane"></span>
+					</div>
+					<h3 class="mb-4">Email Address</h3>
+					<p><a href="mailto:info@yoursite.com">lakshman562000@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate justify-content-center">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-globe"></span>
+					</div>
+					<h3 class="mb-4">Download Resume</h3>
+<p><a href="https://drive.google.com/file/d/1v74KGVs5nPizcNoVoMM1aae2TsDDAyOg/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume Link">Resume</a></p>
+
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					<li class="ftco-animate normal-txt">Find me on</li>
+					<li class="ftco-animate"><a href="https://www.linkedin.com/in/lakshman-chaudhary-4532061ba/"><span class="icon-linkedin"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/l.c._2k?igsh=MWtqd3prb3JsdmZtOQ=="><span class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="https://github.com/lakshman562000"><span class="icon-github"></span></a></li>
+					
+					</a></li>
+				</ul>
+			</div>
+			<br>
+		</div>
+		
+		
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made by <a target="_blank">Lakshman Chaudhary</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
